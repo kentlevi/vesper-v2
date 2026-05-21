@@ -38,8 +38,16 @@
         </div>
       </div>
 
+      <!-- Scroll Indicator -->
+      <div class="mt-28 flex flex-col items-center gap-4 group cursor-pointer hero-scroll opacity-0">
+         <span class="text-brand-gold/40 text-[10px] uppercase tracking-[0.4em] group-hover:text-brand-gold transition-colors duration-500">Scroll to Explore</span>
+         <div class="w-[1px] h-16 bg-gradient-to-b from-brand-gold to-transparent relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-brand-gold animate-scroll-line"></div>
+         </div>
+      </div>
+
       <!-- Feature Bar (under Hero) -->
-      <div class="mt-40 grid grid-cols-1 md:grid-cols-3 gap-0 hero-stagger opacity-0 w-full max-w-6xl border border-white/5 divide-y md:divide-y-0 md:divide-x divide-white/5 bg-brand-surface/20 backdrop-blur-md">
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-0 hero-stagger opacity-0 w-full max-w-6xl border border-white/5 divide-y md:divide-y-0 md:divide-x divide-white/5 bg-brand-surface/20 backdrop-blur-md">
         <div v-for="(item, idx) in features" :key="idx" 
              class="p-8 flex items-center gap-6 group hover:bg-white/5 transition-colors duration-500">
           <div class="w-16 h-16 bg-white/5 flex items-center justify-center text-brand-gold text-2xl group-hover:text-white transition-colors duration-500 border border-white/10 shadow-inner">
@@ -55,13 +63,6 @@
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-4 group cursor-pointer hero-scroll opacity-0">
-       <span class="text-brand-gold/40 text-[10px] uppercase tracking-[0.4em] group-hover:text-brand-gold transition-colors duration-500">Scroll to Explore</span>
-       <div class="w-[1px] h-16 bg-gradient-to-b from-brand-gold to-transparent relative overflow-hidden">
-          <div class="absolute top-0 left-0 w-full h-full bg-brand-gold animate-scroll-line"></div>
-       </div>
-    </div>
   </section>
 </template>
 
